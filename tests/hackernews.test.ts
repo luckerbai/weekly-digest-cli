@@ -55,10 +55,10 @@ describe('fetchStoriesByKeywords', () => {
 
     expect(result.vue).toHaveLength(2)
     // 按 score 降序：800 的 vue ecosystem 在前
-    expect(result.vue[0]?.title).toBe('Vue ecosystem update')
-    expect(result.vue[1]?.title).toBe('Vue 3.5 released')
+    expect(result.vue![0]?.title).toBe('Vue ecosystem update')
+    expect(result.vue![1]?.title).toBe('Vue 3.5 released')
     // job 类型被排除
-    expect(result.vue.some((s) => s.title.includes('job'))).toBe(false)
+    expect(result.vue!.some((s) => s.title.includes('job'))).toBe(false)
   })
 
   it('returns empty array for keywords with no matches', async () => {
