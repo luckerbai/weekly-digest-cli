@@ -1,0 +1,42 @@
+{
+  "name": "weekly-digest-cli",
+  "version": "1.0.0",
+  "description": "A CLI that turns your favorite GitHub repos and Hacker News topics into a clean Markdown digest.",
+  "type": "module",
+  "bin": {
+    "digest": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx src/index.ts",
+    "type-check": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit -p tsconfig.json"
+  },
+  "keywords": [
+    "cli",
+    "digest",
+    "github",
+    "hacker-news",
+    "developer-tools"
+  ],
+  "author": "Lucky",
+  "license": "MIT",
+  "packageManager": "pnpm@12.6.0",
+  "dependencies": {
+    "@clack/prompts": "^1.8.1",
+    "commander": "^15.0.0",
+    "undici": "^8.11.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  }
+}
